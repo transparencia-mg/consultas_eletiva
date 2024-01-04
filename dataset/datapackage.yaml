@@ -2,7 +2,7 @@ name: consulta_eletiva
 owner_org: instituto-de-previdencia-dos-servidores-do-estado-de-minas-gerais-ipsemg
 profile: data-package
 resources:
-  - description: Insira a descrição/explicação detalhada deste recurso.
+  - description: Base de dados extraída do Sistema de Assistência Descentralizada à Saúde (SADS), que mostra a relação de consultas eletivas realizadas por prestadores de serviços credenciados pelo instituto no estado de Minas Gerais. A atualização desta base ocorre mensalmente, no 5º dia útil de cada mês.
     dialect:
       delimiter: ;
     encoding: utf-8-sig
@@ -15,30 +15,56 @@ resources:
       fields:
         - name: data_ref
           type: integer
+          description: Ano e mês, respectivamente, correspondente ao dado.
+          title: Data de referência ano/mês (aaaa_mm)     
         - name: cod_prestador
           type: integer
+          description: Código do prestador de serviços
+          title: Código do Prestador
         - name: nome_prestador
           type: string
+          description: Nome do prestador de serviços.
+          title: Nome do Prestador
         - name: municipio_prestador
           type: string
+          description: Município de origem do prestador de serviços
+          title:Município do Prestador
         - name: uf_prestador
           type: string
+          description: Sigla da Unidade Federativa do prestador de serviços.
+          title: UF do Prestador
         - name: macro_regional_prestador
           type: string
+          description: Macrorregião de origem do prestador de serviços. A macrorregião é o espaço geográfico que envolve um conjunto de microrregiões agrupadas pela densidade demográfica, hierarquizado em função do nível de atenção primária, secundária e terciária à saúde com capacidade instalada
+          title: Macro Região do Prestador
         - name: micro_regional_prestador
           type: string
+          description: Microrregião de origem do prestador de serviços. A microrregião é o espaço geográfico que envolve um conjunto de municípios agrupados pela densidade demográfica e hierarquizado em função do nível de atenção primária, secundária e terciária à saúde, com capacidade instalada e com distância aproximada de 100 km entre eles.
+          title: Micro Região do Prestador
         - name: nome_municipio_benef
           type: string
+          description: Nome do município de origem do beneficiário.
+          title: Município do beneficiário
         - name: uf_beneficiario
           type: string
+          description: Sigla da unidade federativa de origem do beneficiário.
+          title: UF do Beneficiário
         - name: macro_regional_benef
           type: string
+          description: Macrorregião de origem do beneficiário. A macrorregião é o espaço geográfico que envolve um conjunto de microrregiões agrupadas pela densidade demográfica, hierarquizado em função do nível de atenção primária, secundária e terciária à saúde com capacidade instalada
+          title: Macro Região do Beneficiário
         - name: micro_regional_benef
           type: string
+          description: Microrregião de origem do beneficiário. A microrregião é o espaço geográfico que envolve um conjunto de municípios agrupados pela densidade demográfica e hierarquizado em função do nível de atenção primária, secundária e terciária à saúde, com capacidade instalada e com distância aproximada de 100 km entre eles.
+          title: Micro Região do Beneficiário
         - name: qtde_consultas
           type: integer
+          description: Quantidade de consultas eletivas realizadas pelo prestador de serviços.
+          title: Quantidade de consultas
         - name: valor_consultas
           type: string
+          description: Valor total das consultas realizadas.
+          title: Valor da Consulta
     scheme: file
-    title: Insira um título humanamente legível para este recurso.
+    title: Consultas Eletivas
 title: Consulta_eletiva
