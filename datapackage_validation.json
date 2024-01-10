@@ -1,6 +1,6 @@
 {
   "version": "4.16.6",
-  "time": 1.813,
+  "time": 1.808,
   "errors": [],
   "tasks": [
     {
@@ -112,13 +112,13 @@
         "scheme": "file",
         "title": "Consultas Eletivas",
         "stats": {
-          "hash": "187e84da6675101fc0f787930f902866",
+          "hash": "8d566bc817a1bf864857b8f872c93c2f",
           "bytes": 12152629,
           "fields": 13,
           "rows": 93601
         }
       },
-      "time": 1.802,
+      "time": 1.797,
       "scope": [
         "hash-count-error",
         "byte-count-error",
